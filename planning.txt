@@ -1,0 +1,63 @@
+interfaces
+    - IAppRunner
+        - main
+    - ISubject
+        - attach(IObserver)
+        - notifyAll(IEvent)
+    - IObserver
+        - getNotified(IEvent)
+    - IEvent
+    - ILogger
+    - IView : IObserver
+        - __init__(IModel, IController)
+    - IController
+        - __init__(IModel)
+    - IGame : ISubject
+        - get_start_state
+        - get_current_player(state)
+        - // get_next_state(state, move) ?
+        - apply_player_turn
+        - get_legal_moves(state)
+        - get_winner(state)
+        - start_game
+        - end_game
+    - GameState
+        -
+    - Player
+        - id
+        - play_turn
+    - PlayerMove
+        - name
+        - mutate_state
+    - PlayStrategy
+        - update(state)
+        - get_play
+
+Strategies
+    - PMCTS : GameStrategy
+
+Coup-Specific
+    - TerminalView : IView
+    - CoupEvent : IEvent
+        - StateChangeEvent
+        - PlayerActionEvent
+    - CoupGame : Game
+        - apply_player_turn
+            - propose_player_turn
+            - TODO
+    - CoupGameState : GameState
+        - CoupCard
+            - Contessa
+            - Assassin
+            - Captain
+            - Ambasador
+            - Duke
+    - CoupPlayer : Player
+        - HumanPlayer : CoupPlayer
+        - ComputerPlayer : CoupPlayer
+    - CoupPlayerAction : PlayerAction
+        - Income
+        - ForeignAid
+        - Coup
+        - UseCard
+
