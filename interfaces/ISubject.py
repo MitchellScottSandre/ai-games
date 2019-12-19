@@ -1,10 +1,11 @@
 from abc import ABC
 from typing import List
-from interfaces import IObserver, IEvent
+from interfaces.IObserver import IObserver
+from interfaces.IEvent import IEvent
 
 
 class ISubject(ABC):
-    observers: List
+    observers: List[IObserver]
 
     def attach(self, observer: IObserver):
         self.observers = []

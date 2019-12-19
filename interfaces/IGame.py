@@ -1,5 +1,9 @@
 from abc import abstractmethod
-from interfaces import ISubject, IGameState, IPlayerMove, IPlayer
+# from interfaces import ISubject, IGameState, IPlayerMove, IPlayer
+from interfaces.ISubject import ISubject
+from interfaces.IGameState import IGameState
+from interfaces.IPlayerMove import IPlayerMove
+from interfaces.IPlayer import IPlayer
 
 
 class IGame(ISubject):
