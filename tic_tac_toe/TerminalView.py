@@ -1,4 +1,7 @@
-from interfaces import IView, IController, IGame, IEvent
+from interfaces.IView import IView
+from interfaces.IController import IController
+from interfaces.IGame import IGame
+from interfaces.IEvent import IEvent
 
 
 class TerminalView(IView):

@@ -1,5 +1,5 @@
 from interfaces import IGameState
-from . import Player
+from tic_tac_toe.Player import Player
 
 
 class HumanPlayer(Player):

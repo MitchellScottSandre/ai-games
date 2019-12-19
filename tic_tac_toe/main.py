@@ -1,11 +1,13 @@
-from tic_tac_toe import Game
+from tic_tac_toe.Game import Game
+from tic_tac_toe.Controller import Controller
+from tic_tac_toe.TerminalView import TerminalView
+
 
 def main():
     game = Game()
-    x = 5
-    # controller = Controller(game)
-    # terminal_view = TerminalView(controller, game)
-    # game.start_game()
+    controller = Controller(game)
+    view = TerminalView(controller, game)
+    game.start_game()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
-from interfaces import IGameState
 from typing import List
+from interfaces.IGameState import IGameState
 
 class Grid(IGameState):
     class Cell:

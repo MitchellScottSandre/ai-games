@@ -1,6 +1,11 @@
 from typing import List
-from interfaces import IGame, IGameState, IPlayer, IPlayerMove
-# from . import Grid, HumanPlayer, ComputerPlayer
+from interfaces.IGame import IGame
+from interfaces.IGameState import IGameState
+from interfaces.IPlayer import IPlayer
+from interfaces.IPlayerMove import IPlayerMove
+from tic_tac_toe.HumanPlayer import HumanPlayer
+from tic_tac_toe.ComputerPlayer import ComputerPlayer
+from tic_tac_toe.Grid import Grid
 
 
 class Game(IGame):
@@ -14,12 +19,12 @@ class Game(IGame):
     def __init__(self, num_players: int = 2, num_human_players: int = 1, board_width: int = 3, board_height: int = 3):
         self.num_players = num_players
         self.curr_player_index = 0
-        # self.grid = Grid(board_width, board_height)
+        self.grid = Grid(board_width, board_height)
         self.players = []
-        # for i in range(num_human_players):
-        #     self.players.append(HumanPlayer(i))
-        # for i in range(num_players - num_human_players):
-        #     self.players.append(ComputerPlayer(i + num_human_players))
+        for i in range(num_human_players):
+            self.players.append(HumanPlayer(i))
+        for i in range(num_players - num_human_players):
+            self.players.append(ComputerPlayer(i + num_human_players))
 
     def get_current_player(self) -> IPlayer:
         return self.players[self.curr_player_index]

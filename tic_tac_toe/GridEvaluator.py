@@ -1,4 +1,4 @@
-from interfaces import IGameStateEvaluator
+from interfaces. IGameStateEvaluator import IGameStateEvaluator
 from . import Grid
 
 

@@ -1,4 +1,5 @@
-from interfaces import IController, IGame
+from interfaces.IController import IController
+from interfaces.IGame import IGame
 
 
 class Controller(IController):

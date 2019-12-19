@@ -1,6 +1,7 @@
 from typing import List
-from interfaces import IPlayer, IGameState, IPlayerMove
-
+from interfaces.IPlayer import IPlayer
+from interfaces.IGameState import IGameState
+from interfaces.IPlayerMove import IPlayerMove
 
 class Player(IPlayer):
     def __init__(self, id: int):
