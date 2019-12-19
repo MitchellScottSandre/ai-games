@@ -35,29 +35,3 @@ interfaces
 
 Strategies
     - PMCTS : GameStrategy
-
-Coup-Specific
-    - TerminalView : IView
-    - CoupEvent : IEvent
-        - StateChangeEvent
-        - PlayerActionEvent
-    - CoupGame : Game
-        - apply_player_turn
-            - propose_player_turn
-            - TODO
-    - CoupGameState : GameState
-        - CoupCard
-            - Contessa
-            - Assassin
-            - Captain
-            - Ambasador
-            - Duke
-    - CoupPlayer : Player
-        - HumanPlayer : CoupPlayer
-        - ComputerPlayer : CoupPlayer
-    - CoupPlayerAction : PlayerAction
-        - Income
-        - ForeignAid
-        - Coup
-        - UseCard
-

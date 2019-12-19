@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from . import IGameState
+from interfaces import IGameState
 
 
 class IPlayerMove(ABC):

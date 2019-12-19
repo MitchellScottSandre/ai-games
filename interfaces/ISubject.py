@@ -1,12 +1,13 @@
 from abc import ABC
 from typing import List
-from . import IObserver, IEvent
+from interfaces import IObserver, IEvent
 
 
 class ISubject(ABC):
-    observers: List[IObserver] = []
+    observers: List
 
     def attach(self, observer: IObserver):
+        self.observers = []
         self.observers.append(observer)
 
     def notify_all(self, e: IEvent):

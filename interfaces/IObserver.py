@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from . import IEvent
+from interfaces import IEvent
 
 
 class IObserver(ABC):

@@ -1,9 +1,8 @@
-from abc import ABC, abstractmethod
-from typing import List
-from . import IGameState, IPlayerMove, IPlayer
+from abc import abstractmethod
+from interfaces import ISubject, IGameState, IPlayerMove, IPlayer
 
 
-class IGame(ABC):
+class IGame(ISubject):
 
     @abstractmethod
     def get_current_player(self) -> IPlayer:
@@ -11,10 +10,6 @@ class IGame(ABC):
 
     @abstractmethod
     def apply_player_move(self, state: IGameState, player_move: IPlayerMove):
-        pass
-
-    @abstractmethod
-    def get_legal_moves(self, state: IGameState) -> List[IPlayerMove]:
         pass
 
     @abstractmethod

@@ -1,0 +1,31 @@
+Coup-Specific
+    - TerminalView : IView
+    - CoupEvent : IEvent
+        - StateChangeEvent
+        - PlayerActionEvent
+    - CoupGame : Game
+        - apply_player_turn
+            - propose_player_turn
+            - TODO
+    - CoupGameState : GameState
+        - CoupCard
+            - Contessa
+            - Assassin
+            - Captain
+            - Ambasador
+            - Duke
+    - CoupPlayer : Player
+        - HumanPlayer : CoupPlayer
+        - ComputerPlayer : CoupPlayer
+    - CoupPlayerAction : PlayerAction
+        - Income
+        - ForeignAid
+        - Coup
+        - UseCard
+
+Logic flow for playing a player's move:
+- Game::main:: call next player play_move
+- player picks a legal move
+    - human: list all, get input
+    - computer: list all, do some stuff
+-

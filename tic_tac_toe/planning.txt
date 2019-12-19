@@ -1,0 +1,5 @@
+- terminalView
+- controller
+- Game
+- Board : gameState
+- player
